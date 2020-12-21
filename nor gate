@@ -1,1 +1,46 @@
+                 DATAFLOW MODEL
+----------------------------------------------------------------------------------
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity not_df_j7 is
+    Port ( a : in  STD_LOGIC;
+           b : out  STD_LOGIC);
+end not_df_j7;
+
+architecture Behavioral of not_df_j7 is
+
+begin
+b<= not a;
+
+end Behavioral;
+
+
+
+
+                        BEHAVIOURAL MODEL
+----------------------------------------------------------------------------------
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity not7_b_j7 is
+    Port ( a : in  STD_LOGIC;
+           b : out  STD_LOGIC);
+end not7_b_j7;
+
+architecture Behavioral of not7_b_j7 is
+
+begin
+process(a)
+begin
+if (a='1')then
+b<='0';
+else 
+b<='1';
+end if ;
+end process;
+
+
+end Behavioral;
+
 
